@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>OG Banner — Dr. Pablo de la Garza Chalita</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .banner {
+      width: 1200px;
+      height: 630px;
+      background: linear-gradient(120deg, #e8f4fd 0%, #f0f9ff 40%, #ffffff 100%);
+      display: flex;
+      align-items: stretch;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .banner::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 6px;
+      background: linear-gradient(180deg, #2563eb, #0ea5e9);
+    }
+
+    .left {
+      flex: 0 0 640px;
+      padding: 64px 56px 64px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .specialty-tag {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 22px;
+      width: fit-content;
+    }
+
+    .doctor-name {
+      font-size: 52px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .divider {
+      width: 48px;
+      height: 4px;
+      background: linear-gradient(90deg, #2563eb, #0ea5e9);
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 500;
+      color: #334155;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .tagline {
+      font-size: 17px;
+      font-weight: 400;
+      color: #64748b;
+      margin-bottom: 36px;
+      line-height: 1.4;
+    }
+
+    .url {
+      font-size: 14px;
+      font-weight: 600;
+      color: #2563eb;
+      letter-spacing: 0.02em;
+    }
+
+    .right {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .right::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 60px;
+      background: linear-gradient(90deg, #f0f9ff, transparent);
+      z-index: 1;
+    }
+
+    .right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .right .img-fallback {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #bfdbfe, #93c5fd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1d4ed8;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="left">
+      <span class="specialty-tag">Anestesiología Dental</span>
+      <div class="doctor-name">Dr. Pablo<br>de la Garza<br>Chalita</div>
+      <div class="divider"></div>
+      <div class="title">Médico Anestesiólogo Especialista</div>
+      <div class="tagline">Sedación dental segura · Monterrey, N.L.</div>
+      <div class="url">drpablodelagarzachalita.com.mx</div>
+    </div>
+    <div class="right">
+      <img
+        src="https://www.drpablodelagarzachalita.com.mx/doctor-principal.jpg"
+        alt="Dr. Pablo de la Garza Chalita"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      />
+      <div class="img-fallback" style="display:none;">
+        [Foto del doctor]
+      </div>
+    </div>
+  </div>
+</body>
+</html>
